@@ -80,6 +80,8 @@ jobs:
 
     - name: Deploy to Netlify
       run: |
+        ls -la /
+        ls -la ./taskwise
         cd taskwise
         echo "Deploying to Netlify..."
         ls -la   # List all files and directories in the current directory
