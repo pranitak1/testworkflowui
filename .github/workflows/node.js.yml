@@ -82,7 +82,8 @@ jobs:
       run: |
         cd taskwise
         echo "Deploying to Netlify..."
-        ls -la build
+        ls -la   # List all files and directories in the current directory
+        ls -la build   # List files and directories in the build directory
 
     - name: Deploy to Netlify
       uses: South-Paw/action-netlify-deploy@v1.2.0
