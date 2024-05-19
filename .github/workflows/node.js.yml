@@ -28,6 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: taskwise/package-lock.json
 
     - name: Verify lock file presence
       run: |
@@ -75,5 +76,3 @@ jobs:
         netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
         build-dir: './taskwise/build'
         comment-on-commit: true
-
-
