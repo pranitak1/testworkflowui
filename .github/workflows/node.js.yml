@@ -31,7 +31,7 @@ jobs:
 
     - name: Verify lock file presence
       run: |
-        if [ ! -f taskwise/package-lock.json ] && [ ! -f taskwise/npm-shrinkwrap.json ] && [ ! -f taskwise/yarn.lock ]; then
+        if [ ! -f ./taskwise/package-lock.json ] && [ ! -f ./taskwise/npm-shrinkwrap.json ] && [ ! -f ./taskwise/yarn.lock ]; then
           echo "No lock file found in taskwise directory. Please commit package-lock.json, npm-shrinkwrap.json, or yarn.lock."
           exit 1
         fi
@@ -75,4 +75,5 @@ jobs:
         netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
         build-dir: './taskwise/build'
         comment-on-commit: true
+
 
