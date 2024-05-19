@@ -50,6 +50,11 @@ jobs:
         cd taskwise
         npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
+    - name: Add npm install react-scripts
+      run: |
+        cd taskwise
+        npm install react-scripts
+
     - name: Build the app
       run: |
         cd taskwise
@@ -87,3 +92,4 @@ jobs:
         netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
         build-dir: './taskwise/build'
         comment-on-commit: true
+
